@@ -10,17 +10,28 @@ public class GameManager : MonoBehaviour
     public void EndGame() {
         Debug.Log("Game over");
         Invoke("Restart", 2f);
+        
+    }
+
+// test 2
+    public void CompleteLevel() {
+        Debug.Log("compelete");
         completeLevelUI.SetActive(true);
     }
 
-// test
-    public void CompleteLevel() {
-        Debug.Log("compelete");
+    public void LoadNextLevel() {
+        // Invoke("LoadNextLevel", 2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+
+    public void quit() {
+        Debug.Log("quit");
+        Application.Quit();
+    }
 
 }

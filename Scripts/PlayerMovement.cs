@@ -27,6 +27,15 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
+        if (Input.GetKey("a")) {
+            rb.AddForce(new Vector2(-5, 0 * Time.deltaTime));
+            
+        }
+        if (Input.GetKey("d")) {
+            rb.AddForce(new Vector2(5, 0 * Time.deltaTime));
+            
+        }
+
         if (Input.GetKey("s")) {
             rb.AddForce(new Vector2(0, -1000 * Time.deltaTime));
             
